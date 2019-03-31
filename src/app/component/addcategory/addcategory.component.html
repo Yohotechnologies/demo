@@ -1,0 +1,32 @@
+<div class="add_category"> 
+  <h1>Add Category</h1>
+    <form [formGroup]="form" >
+        <mat-form-field>
+            <mat-select placeholder="Select Brand" formControlName="brand">
+          
+                <mat-option value="yoshna"> {{ 'yoshna' }}</mat-option>
+                <mat-option value="ohpair"> {{ 'ohpair' }}</mat-option>
+         
+           
+          </mat-select>
+          </mat-form-field>
+
+          
+        
+          <mat-form-field>
+            <input  matInput formControlName="category_name" placeholder="Category Name" />
+          </mat-form-field>
+        
+          <input  type="file"  (change)="fileUpload($event, fileInput.value)" #fileInput  />
+
+        
+      
+    </form>
+
+      <br>
+      
+    <button [disabled]="!form.valid" mat-raised-button color="primary" (click)="addCategory()" >Add Category</button>
+    
+</div>
+
+{{form.value | json}}

@@ -1,0 +1,77 @@
+<div class="product_container" *ngIf="product">
+
+  <div class="child">
+      <div class="image">
+          <img src="https://images-na.ssl-images-amazon.com/images/I/81SQ6c-AO6L._UY445_.jpg" alt="">
+         
+          <div class="title">
+              {{product['image_name']}}
+            </div> 
+        </div>
+      
+  </div>
+  <div class="child">
+
+
+
+    <h1>Description</h1>
+{{product['description']}}
+ <br>
+ <br>
+<div class="product_price">
+    Price: &nbsp;
+  <img class="currency" src="assets/india.svg" alt="">
+  
+  <span> {{product['price']}}</span>
+</div>   
+
+</div>
+    <!-- <div class="image">
+        <img src="https://images-na.ssl-images-amazon.com/images/I/81SQ6c-AO6L._UY445_.jpg" alt="">
+    </div>
+    <div class="edit_form">
+        <form >
+            <mat-form-field>
+                <input matInput  placeholder="Product Name" />
+              </mat-form-field>
+          
+              <mat-form-field>
+                <input  matInput placeholder="Brand" />
+              </mat-form-field>
+          
+              <mat-form-field>
+                <input  matInput placeholder="Category" />
+              </mat-form-field>
+          
+              <mat-form-field>
+                <input
+                  matInput
+                  placeholder="Amount"
+                  type="number"
+                  
+                  class="example-right-align"
+                />
+                <span matPrefix>₹&nbsp;</span>
+              </mat-form-field>
+          
+          
+              <mat-form-field>
+                  <input
+                    matInput
+                    
+                    placeholder="Discount"
+                    type="number"
+                    class="example-right-align"
+                  />
+                  <span matPrefix>₹&nbsp;</span>
+                </mat-form-field>
+          
+              <mat-form-field>
+                <textarea matInput placeholder="Description"></textarea>
+              </mat-form-field>
+          
+              <input  type="file"  (change)="fileUpload($event, fileInput.value)" #fileInput class="custom-file-input" />
+          </form>
+    </div> -->
+
+</div>

@@ -1,0 +1,34 @@
+.product_container{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    
+    height: 80vh;
+    
+    // flex-direction: column;
+}
+.edit_form,image{
+flex: 1;
+
+
+}
+.image{
+    display: inline;
+    img{
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    }
+}
+mat-form-field{
+    display: block;
+}
+.title{
+    text-align: center;
+}
+
+.currency{
+    width: 10px;
+    height: 10px;
+    color: red;
+}

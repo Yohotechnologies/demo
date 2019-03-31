@@ -1,0 +1,24 @@
+.example-container {
+  position: fixed;
+  width: 100%;
+  height: 90vh;
+}
+
+mat-drawer-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-left: 30px;
+  align-items: flex-start;
+ 
+}
+mat-drawer {
+  width: 20%;
+}
+mat-icon {
+  padding-right: 0.6rem;
+}
+mat-list-item,
+mat-icon {
+  cursor: pointer;
+}

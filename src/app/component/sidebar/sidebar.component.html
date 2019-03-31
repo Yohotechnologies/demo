@@ -1,0 +1,73 @@
+<mat-toolbar color="primary">
+  <mat-icon
+    aria-hidden="false"
+    aria-label="Example Admin icon"
+    (click)="drawer.toggle()"
+    >menu</mat-icon
+  ><span>Dashboard</span>
+</mat-toolbar>
+
+<mat-drawer-container class="example-container">
+  
+    <mat-drawer #drawer mode="side" opened>
+        <mat-list role="list">
+            <mat-list-item
+              role="listitem"
+              (click)="onRoute('dashboard/additem', drawer)"
+              ><mat-icon>create</mat-icon>Add Product</mat-list-item
+            >
+            <mat-list-item
+              role="listitem"
+              (click)="onRoute('dashboard/allproducts', drawer)"
+            >
+              <mat-icon>pageview</mat-icon> All Products</mat-list-item
+            >
+            <mat-list-item role="listitem"
+            (click)="onRoute('dashboard/addcategory', drawer)"
+            >
+              <mat-icon>settings</mat-icon> Add Category</mat-list-item
+            >
+            <mat-list-item
+              role="listitem"
+              (click)="onRoute('dashboard/orders', drawer)"
+            >
+              <mat-icon>shopping_cart</mat-icon>Orders</mat-list-item
+            >
+          </mat-list>
+    </mat-drawer>
+    <mat-drawer-content><router-outlet></router-outlet></mat-drawer-content>
+  </mat-drawer-container>
+
+<!-- 
+
+<mat-drawer-container class="example-container" [hasBackdrop]="false">
+  <mat-drawer #drawer opened>
+    <mat-list role="list">
+      <mat-list-item
+        role="listitem"
+        (click)="onRoute('dashboard/additem', drawer)"
+        ><mat-icon>create</mat-icon>Add Product</mat-list-item
+      >
+      <mat-list-item
+        role="listitem"
+        (click)="onRoute('dashboard/allproducts', drawer)"
+      >
+        <mat-icon>pageview</mat-icon> All Items</mat-list-item
+      >
+      <mat-list-item role="listitem">
+        <mat-icon>settings</mat-icon> Item 3</mat-list-item
+      >
+      <mat-list-item
+        role="listitem"
+        (click)="onRoute('dashboard/orders', drawer)"
+      >
+        <mat-icon>shopping_cart</mat-icon>Orders</mat-list-item
+      >
+    </mat-list>
+  </mat-drawer>
+
+  <mat-drawer-content>
+    <router-outlet></router-outlet>
+  </mat-drawer-content>
+</mat-drawer-container> -->
+<!-- shopping_cart  orders -->

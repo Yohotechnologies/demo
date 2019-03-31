@@ -1,0 +1,85 @@
+<!-- <mat-toolbar color="primary">
+  <span>Add Items</span>
+  <mat-icon>create</mat-icon>
+</mat-toolbar> -->
+
+<main>
+  <h1>Add Product</h1>
+  <div class="example-container">
+ <form [formGroup]="form">
+    <mat-form-field>
+        <input matInput formControlName="product_name" placeholder="Product Name" />
+      </mat-form-field>
+      <mat-form-field>
+          <mat-select placeholder="Select Brand" formControlName="brand">        
+                <mat-option value="yoshna"> {{ 'yoshna' }}</mat-option>
+                <mat-option value="ohpair"> {{ 'ohpair' }}</mat-option>          
+          </mat-select>
+      </mat-form-field>
+<!-- 
+      <mat-form-field>
+        <input formControlName="brand" matInput placeholder="Brand" />
+      </mat-form-field> -->
+  
+
+      <mat-form-field>
+          <mat-select placeholder="Select Category" formControlName="category">
+            <ng-container *ngFor="let cat of category; let i =index">
+                <mat-option [value]="cat['category_name']"> {{ cat['category_name'] }}</mat-option>
+            </ng-container>
+           
+          </mat-select>
+
+        </mat-form-field>
+
+
+      <!-- <mat-form-field>
+        <input formControlName="category" matInput placeholder="Category" />
+      </mat-form-field> -->
+  
+      <mat-form-field>
+        <input
+          matInput
+          placeholder="Amount"
+          type="number"
+          formControlName="discount"
+          class="example-right-align"
+        />
+        <span matPrefix><img src="assets/india.svg" alt="Currency"></span>
+      </mat-form-field>
+  
+  
+      <mat-form-field>
+          <input
+            matInput
+            formControlName="price"
+            placeholder="Discount"
+            type="number"
+            class="example-right-align"
+          />
+          <span matPrefix><img src="assets/india.svg" alt="Currency"></span>
+        </mat-form-field>
+  
+      <mat-form-field>
+        <textarea    formControlName="description" matInput placeholder="Description"></textarea>
+      </mat-form-field>
+  
+      <input  type="file"  (change)="fileUpload($event, fileInput.value)" #fileInput class="custom-file-input" />
+  
+ </form>
+    <br />
+    <br />
+
+    <!-- 
+    <div class="container">
+      <button md-raised-button color="primary" (click)="fileInput.click()">
+        Upload
+      </button>
+      <input matInput  type="file" #fileInput />
+    </div> -->
+
+    <button mat-raised-button color="primary" (click)="addProduct()" >Add Products</button>
+  </div>
+</main>
+
+{{form.value | json}}

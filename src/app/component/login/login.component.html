@@ -1,0 +1,23 @@
+<mat-toolbar color="primary">
+  <span>Admin</span>
+</mat-toolbar>
+
+<div class="container">
+  <div class="child-container">
+    <form [formGroup]="form">
+      <mat-form-field>
+        <input formControlName="email" matInput placeholder="Email" />
+      </mat-form-field>
+
+      <mat-form-field>
+        <input
+          formControlName="password"
+          matInput
+          type="password"
+          placeholder="Password"
+        />
+      </mat-form-field>
+      <button mat-raised-button color="primary" (click)="login()">Login</button>
+    </form>
+  </div>
+</div>
